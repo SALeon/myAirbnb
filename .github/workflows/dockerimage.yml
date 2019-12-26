@@ -1,0 +1,16 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build docker image
+      run: docker build -t leon/client-test -f Dockerfile  ./client/Dockerfile ./client
+    - name: Run client tests
+      run: docker run -t leon/client-test -f Dockerfile  ./client/Dockerfile ./client
