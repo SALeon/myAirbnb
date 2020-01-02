@@ -1,0 +1,6 @@
+{
+    "prettier.prettierPath": "/Users/siarheileanavets/work/myAirbnb/node_modules/prettier",
+    "prettier.singleQuote": true,
+    "prettier.configPath": "/Users/siarheileanavets/work/myAirbnb/.prettierrc",
+    "eslint.format.enable": true
+}
