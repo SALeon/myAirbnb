@@ -1,6 +1,9 @@
 name: Docker Image CI
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
 
@@ -10,11 +13,42 @@ jobs:
         DOCKER_ID: ${{ secrets.DOCKER_ID }}
         PROJECT: ${{ secrets.PROJECT }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        GIT_SHA: ${{ github.sha }}
     steps:
     - uses: actions/checkout@v1
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+          service_account_email: ${{ secrets.GKE_EMAIL }}
+          service_account_key: ${{ secrets.GKE_KEY }}
+      #  gcloud config set project room-book-264007
+    - run: |
+         gcloud info
+
+    - name: Set GKE project
+      run: |
+         gcloud config set project room-book-264007
+    - name: Set GKE zone
+      run: |
+       gcloud config set compute/zone us-central1-a
+    - name: GKE get get-credentials
+      run: |
+       gcloud container clusters get-credentials standard-cluster-1
+
     - name: Build the Docker image
-      run: docker build --file Dockerfile -t $DOCKER_ID/$PROJECT-client .
+      run: |
+        docker build --file Dockerfile -t $DOCKER_ID/$PROJECT-client:latest -t $DOCKER_ID/$PROJECT-client:$GIT_SHA  .
     - name: Log in to the docker CLI
-      run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID  --password-stdin
-    - name: Take those images and push them to docker hub
-      run:  docker push $DOCKER_ID/$PROJECT-client
+      run: |
+       echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID  --password-stdin
+    - name: Take latest images and push it to docker hub
+      run:  |
+        docker push $DOCKER_ID/$PROJECT-client:latest
+    - name: Take sha images and push it to docker hub
+      run:  |
+        docker push $DOCKER_ID/$PROJECT-client:$GIT_SHA
+    - name: Register deployments folder
+      run:  |
+        kubectl apply -f deployments
+    - name: Take sha images and set  to  GKE
+      run:  |
+        kubectl set image deployments/client-deployment client=leonsab/room-book-client:$GIT_SHA --record
