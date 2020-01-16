@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "node_modules/@angular/cli/bin/ng",
+    "c": "cd src/app/components && ng g c test1 --module=app.module",
     "eslint": "node_modules/.bin/eslint",
     "start": "ng serve",
     "build": "ng build",
