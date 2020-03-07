@@ -8,4 +8,7 @@ module.exports = {
     'airbnb-typescript/base',
     'plugin:prettier/recommended'
   ],
+  rules: {
+    // 'array-element-newline': ["error", "consistent", { "minItems": 3 }]
+  }
 };
