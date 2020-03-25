@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEV=true nodemon --inspect ./src/index.js",
+    "init": "docker-compose up -d",
+    "mongo-init": "docker run --name room_book_db -p 27017:27017 -d mongo",
+    "mongo-seed": "node -r ./database/mongoDB/seed/seedMongoDB.js",
+    "mongo-start": "docker start -i room_book_db",
+    "mongo-remove": "docker rm -f room_book_db",
+    "mongo-com-start": "docker-compose up",
+    "mongo-com-stop": "docker-compose stop",
+    "eslint-fix": "node_modules/.bin/eslint --fix ./src --ext .js"
+  },
+  "author": "Siarhei Leanavets",
+  "license": "ISC",
+  "engines": {
+    "node": ">=11.6.0"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^4.5.0",
+    "aws-sdk": "^2.635.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.9",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "stripe": "^8.29.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2"
+  }
+}

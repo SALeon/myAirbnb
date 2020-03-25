@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  mongo-server:
+    container_name: mongo_db
+    image: 'mongo'
+    restart: always
+    env_file:
+      ./docker/mongoDB.env
+    ports:
+      - 27017:27017
+    volumes:
+      - ./database/mongoDB/db-init/:/docker-entrypoint-initdb.d
