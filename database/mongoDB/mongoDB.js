@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { addRentals } = require('./seed/seedMongoDB');
+// const { addRentals } = require('./seed/seedMongoDB');
 const { DB } = require('../../config/mongoSettings');
 
 let mongoDB = null;
@@ -11,10 +11,10 @@ try {
       useCreateIndex: true,
       useUnifiedTopology: true
     });
-    console.info('Mongodb has been connected');
-    mongoose.connection.db.dropCollection('users', () => {});
-    mongoose.connection.db.dropCollection('rentals', () => {});
-    addRentals();
+    // console.info('Mongodb has been connected');
+    // mongoose.connection.db.dropCollection('users', () => {});
+    // mongoose.connection.db.dropCollection('rentals', () => {});
+    // addRentals();
     return mongoDB;
   };
 

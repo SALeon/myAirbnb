@@ -52,7 +52,7 @@ class Header extends React.Component {
     return (
       <nav className="navbar navbar-dark navbar-expand-lg">
         <div className="container">
-          <Link className="navbar-brand" to="/rentals">BookWithMe
+          <Link className="navbar-brand" to="/rentals">Арендуй и зарабатывай
             <img src="https://push.regione.puglia.it/documents/20181/0/houses.png/43efe188-34ec-4a6b-8985-c9e226a145fb?version=1.0&t=1465211139182&imagePreview=1" alt="" />
           </Link>
           <RentalSearchInput />

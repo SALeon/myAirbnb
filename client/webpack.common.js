@@ -32,9 +32,6 @@ module.exports = {
             name: '[hash]-[name].[ext]'
           }
         }
-      }, {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,

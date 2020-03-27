@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "DEV=true nodemon --inspect ./src/index.js",
+    "dev-start": "DEV=true nodemon --inspect ./src/index.js",
+    "start": "node  ./src/index.js --prefix server",
     "init": "docker-compose up -d",
-    "mongo-init": "docker run --name room_book_db -p 27017:27017 -d mongo",
+    "build": "cd .client && npm run build",
+    "heroku-postbuild": "npm run build",
     "mongo-seed": "node -r ./database/mongoDB/seed/seedMongoDB.js",
     "mongo-start": "docker start -i room_book_db",
     "mongo-remove": "docker rm -f room_book_db",
@@ -17,7 +19,8 @@
   "author": "Siarhei Leanavets",
   "license": "ISC",
   "engines": {
-    "node": ">=11.6.0"
+    "node": "13.10.1",
+    "npm": "6.13.7"
   },
   "dependencies": {
     "@google-cloud/storage": "^4.5.0",
@@ -25,6 +28,7 @@
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^14.4.2",
