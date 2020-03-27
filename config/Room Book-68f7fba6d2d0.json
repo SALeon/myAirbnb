@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "room-book-264007",
+  "private_key_id": "68f7fba6d2d099e4f503700bc953713eaf2ff262",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCtcsazc5qRV/wg\nQk/lAhNvUnUrhQMjh1wrx3PmbIKXaP0DVH0MgiPlV+rcdgar73d0F2XLqNU79RvO\ngebknnjjbD1TyMDQd2H3It4wHEdMaz8nFlqwLjH+N+t5GooVZ3s3JXYAclqzB/hv\nYL5MqslZvwkllQeoxXq8MQuKqntdcLxfpyxQ2Ka7va5Yttz5+a6X5TgSBQ1Seq4s\ngvYHbBwKg+bvbfHxOWtHcu3tz6U9CGVPLnoEzNe9SLRYheJu9Lxvy69G8XauJzPD\nceGIgeVrM9oAFkjnIdxzagMIRqkJRufKCq7m9y23afnWJVzKEOPVaJLFoLMti0HF\nTlG9PI2RAgMBAAECggEACFTXDo+jARBE4BfPVqS+4j4Husts1ywNVV0DSDI2I6e7\nX4mTaCJoLwAGHAjfUSrzhfQJw7qcY4DmkQjUWm7yR5pPZ9Lg0CKr5f8axRzWn+kW\n433DZWsSo69z9CE+OMD7vi5ieKsFiEv9tvviqDQb79+pRNDfyU+TEa8ZatO9kUNg\nwCuEr1DAxDWN1EWOaOCxhSpg/47wA8rlZM1d+St4VmMB28++LuB6zENOpa/O9eZ9\nPeGMYEq5aVxOZpt0XG4hZ7P6ZD7oEUY+SN1w/Ml+uHOSEATyNqdhd2xUeG6J+v6S\nWbvii0kBe/v/g2jfk32xLt/Rw2uApiZ0+Hby/mUfQQKBgQDgjGYPtGJcHO30JSa7\nQFDbspyLbGwXpTZKqBQVVQYeyC7aFKZaw9a2f7cy1wI77wGKCGNxM3aNAjYueUQW\nyfVBIeve//99ZGVcFXz2xiHF35fw/B+qrptLGZ69gmlwXSrlgfS6i4hrUO1whIhc\nyvH2nQov506xyKlRfN1h/ziKFQKBgQDFvhbBTPmzSL9MGzdvmI2hTQ7sPs/3u1fP\nNiPWFNe3fzbHVuibhKvCYb9lyIi5L6hEo5kVB2hekPiE/A579Xdc50v2pIWgy68D\nA9q+VtRKUyXzyIRC2RZVmG2ZDzchIIRQ+dXZwE7Rm7Z6Z2BBBiyIqSlQEE+5C9Oy\nkPyHN1aAjQKBgQChh13D3lcDPCxQfIkoGlQQNqQ2B4CaYdZ0TgRkdA07B3Xsmv4w\nPMCv95+pitGom33X9cDTJdoaBYVEWSeJ3S339Jbgi/cWFKp1W1/RhSW2WenLCRMe\njQxZMcznNnDyy5KYFqwdpVI1ILotPql5VuRIKx+w5gvOCDME03XNkPLzIQKBgHyB\n6TADOMJTTugrxucEZkEnFPtZvXbdxjdZfo0AiKcoeaRgK4woqEF3bJ04/CWmRUwa\nunvMM0JAA8swLiqM74BWvrTo+J67QVIjrirk3zyBSEdMfULeD7sLhA64ztyT7dxS\nwv0dokNGyUofJzMqIQZXhQS9kIUSVlR8CBVXmabNAoGBAN3wWNsHtbHo0N8nXu2L\nFFuDFwN/iRlngdFwZTadNvIQiXYHbIq9WdPVzn/feLYMTQw/q74QWvrIq40rB8jQ\ngSGHp/Mbz/Iw842Z2X7VZXea8IpPGMEITMtzd+nD9eFrd79jeJEOAiylLWmP+V5K\nxZ0DRrUgaqx4CdZxcp5+3pEz\n-----END PRIVATE KEY-----\n",
+  "client_email": "runbucket@room-book-264007.iam.gserviceaccount.com",
+  "client_id": "100423392074047927660",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/runbucket%40room-book-264007.iam.gserviceaccount.com"
+}

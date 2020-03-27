@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render SearchField component 1`] = `
+<div>
+  Ddd
+</div>
+`;

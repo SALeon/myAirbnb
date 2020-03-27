@@ -1,0 +1,55 @@
+.navbar {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: $main-black-color;
+
+  .bwm-search {
+    width: 300px !important;
+    height: 50px;
+  }
+
+  .navbar-brand {
+    margin-right: 30px;
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: $main-color !important;
+    font-weight: 500;
+
+    img {
+      height: 28px;
+      margin-left: 20px;
+    }
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .btn-primary-search {
+    border-color: $main-color;
+    color: $main-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent !important;
+      border-color: $main-color !important;
+      color: $main-color !important;
+      box-shadow: none;
+    }
+  }
+
+  .nav-item {
+    color: $main-white-color;
+  }
+
+  .dropdown-menu {
+    .dropdown-item {
+      font-size: 14px;
+
+      &:active {
+        background-color: $main-color;
+      }
+    }
+  }
+}
