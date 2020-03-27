@@ -8,7 +8,6 @@
     "start": "webpack-dev-server --color --config webpack.dev.js",
     "eslint-fix": "../node_modules/.bin/eslint --fix ./src --ext .js,.jsx",
     "build": "webpack --config webpack.prod.js",
-    "heroku-postbuild": "npm run build",
     "test": "./node_modules/.bin/jest --colors",
     "test-coverage": "./node_modules/.bin/jest  --coverage --collectCoverageFrom=src/**/*.{js,jsx}",
     "style-lint-fix": "./node_modules/.bin/stylelint \"**/*.scss\" --fix",

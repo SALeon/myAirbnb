@@ -10,7 +10,7 @@ class AxiosService {
 
   initInstance() {
     this.axiosInstance = axios.create({
-      baseURL: 'http://localhost:5050/api/v1/',
+      baseURL: 'https://diplom-room-book.herokuapp.com/api/v1/',
       timeout: 20000
     });
 
