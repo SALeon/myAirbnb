@@ -31,13 +31,13 @@ export class EditableInput extends EditableComponent {
             onClick={() => this.update()}
             className="btn btn-success btn-editable"
             type="button"
-          > Save
+          > Сохранить
           </button>
           <button
             onClick={() => this.disableEdit()}
             className="btn btn-warning btn-editable"
             type="button"
-          > Close
+          > Закрыть
           </button>
         </React.Fragment>
       );
@@ -50,7 +50,7 @@ export class EditableInput extends EditableComponent {
           onClick={() => this.enableEdit()}
           className="btn btn-warning btn-editable"
           type="button"
-        > Edit
+        > Редактировать
         </button>
       </React.Fragment>
     );

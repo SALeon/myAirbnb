@@ -28,12 +28,12 @@ class Login extends React.Component {
         <div className="bwm-form">
           <div className="row">
             <div className="col-md-5">
-              <h1>Login</h1>
+              <h1>Вход</h1>
               {
                 successRegister
                   && (
                   <div className="alert alert-success">
-                    <p> You have been succesfuly registered, please login now. </p>
+                    <p> Регистрация успешна. Войдите в приложение </p>
                   </div>
                   )
               }
@@ -41,7 +41,7 @@ class Login extends React.Component {
             </div>
             <div className="col-md-6 ml-auto">
               <div className="image-container">
-                <h2 className="catchphrase">Hundreds of awesome places in reach of few clicks.</h2>
+                <h2 className="catchphrase">Сотни городов открыты тебе.</h2>
                 <img src="https://proteh.org/wp-content/uploads//2020/01/46jkurlh-pijqfntbh-t31tiqpy.jpeg" alt="" />
               </div>
             </div>

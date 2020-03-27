@@ -158,7 +158,7 @@ export class BwmFileUpload extends React.Component {
       <div className="img-upload-container">
         <div className="img-upload-button-container">
           <label className="img-upload btn btn-primary">
-            <span className="upload-text"> Select an image </span>
+            <span className="upload-text"> Загрузить изображение </span>
             <input
               type="file"
               accept=".jpg, .png, .jpeg"

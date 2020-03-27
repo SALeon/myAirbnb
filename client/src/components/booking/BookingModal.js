@@ -14,22 +14,22 @@ export function BookingModal(props) {
 
   return (
     <Modal open={open} onClose={closeModal} little classNames={{ modal: 'booking-modal' }}>
-      <h4 className="modal-title title">Confirm Booking </h4>
+      <h4 className="modal-title title">Оплата аренды</h4>
       <p className="dates">{booking.startAt} / {booking.endAt}</p>
       <div className="modal-body">
-        <em>{booking.days}</em> nights /
-        <em>{rentalPrice}$</em> per Night
-        <p>Guests: <em>{booking.guests}</em></p>
-        <p>Price: <em>{booking.totalPrice}$ </em></p>
+        <em>{booking.days}</em> ночей /
+        <em>{rentalPrice}$</em> за ночь
+        <p>Гостей: <em>{booking.guests}</em></p>
+        <p>Стоимость: <em>{booking.totalPrice}$ </em></p>
 
         {acceptPayment && acceptPayment()}
 
-        <p>Do you confirm your booking for selected days?</p>
+        <p>Подтвердить аренду для выбранных дней?</p>
       </div>
       <BwmResError errors={errors} />
       <div className="modal-footer">
-        <button disabled={disabled} onClick={confirmModal} type="button" className="btn btn-primary">Confirm</button>
-        <button type="button" onClick={closeModal} className="btn btn-primary">Cancel</button>
+        <button disabled={disabled} onClick={confirmModal} type="button" className="btn btn-primary">Оплатить</button>
+        <button type="button" onClick={closeModal} className="btn btn-primary">Отмена</button>
       </div>
     </Modal>
   );

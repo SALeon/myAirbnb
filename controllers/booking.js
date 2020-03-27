@@ -26,7 +26,7 @@ exports.createBooking = function(req, res) {
 
       if (foundRental.user.id === user.id) {
         return res.status(422).send({
-          errors: [{ title: 'Invalid User!', detail: 'Cannot create booking on your Rental!' }]
+          errors: [{ title: 'Invalid User!', detail: 'Нельзя резервировать свои помещения!' }]
         });
       }
 
@@ -53,7 +53,7 @@ exports.createBooking = function(req, res) {
         }
       } else {
         return res.status(422).send({
-          errors: [{ title: 'Invalid Booking!', detail: 'Choosen dates are already taken!' }]
+          errors: [{ title: 'Не верная бронь!', detail: 'Выбранные даты уже зарезервированы!' }]
         });
       }
     });
@@ -122,6 +122,6 @@ async function createPayment(booking, toUser, token) {
       return { err: err.message };
     }
   } else {
-    return { err: 'Cannot process Payment!' };
+    return { err: 'Нельзя продолжить оплату!' };
   }
 }

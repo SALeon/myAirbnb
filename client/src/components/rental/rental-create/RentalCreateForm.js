@@ -16,14 +16,14 @@ const RentalCreateForm = props => {
       <Field
         name="title"
         type="text"
-        label="Title"
+        label="Заголовок"
         className="form-control"
         component={BwmInput}
       />
       <Field
         name="description"
         type="text"
-        label="Description"
+        label="Описание"
         rows="6"
         className="form-control"
         component={BwmTextArea}
@@ -31,34 +31,34 @@ const RentalCreateForm = props => {
       <Field
         name="city"
         type="text"
-        label="City"
+        label="Город"
         className="form-control"
         component={BwmInput}
       />
       <Field
         name="street"
         type="text"
-        label="Street"
+        label="Улица"
         className="form-control"
         component={BwmInput}
       />
       <Field
         options={options}
         name="category"
-        label="Category"
+        label="Тип жилья"
         className="form-control"
         component={BwmSelect}
       />
       <Field
         name="image"
-        label="Image"
+        label="Фото"
         component={BwmFileUpload}
       />
       <Field
         name="bedrooms"
         min="0"
         type="number"
-        label="Bedrooms"
+        label="Спальных мест"
         className="form-control"
         component={BwmInput}
       />
@@ -66,7 +66,7 @@ const RentalCreateForm = props => {
         name="dailyRate"
         min="0"
         type="number"
-        label="Daily Rate"
+        label="Плата в сутки"
         className="form-control"
         symbol="$"
         component={BwmInput}
@@ -74,12 +74,12 @@ const RentalCreateForm = props => {
       <Field
         name="shared"
         type="checkbox"
-        label="Shared"
+        label="С подселением "
         className="form-control"
         component={BwmInput}
       />
       <button className="btn btn-primary btn-form" type="submit" disabled={!valid || pristine || submitting}>
-        Create Rental
+        Создать аренду
       </button>
       <BwmResError errors={errors} />
     </form>

@@ -10,7 +10,7 @@ const RegisterForm = props => {
       <Field
         name="username"
         type="text"
-        label="Username"
+        label="Имя пользователя"
         className="form-control"
         component={BwmInput}
       />
@@ -24,7 +24,7 @@ const RegisterForm = props => {
       <Field
         name="password"
         type="password"
-        label="Password"
+        label="password"
         className="form-control"
         component={BwmInput}
       />
@@ -36,7 +36,7 @@ const RegisterForm = props => {
         component={BwmInput}
       />
       <button className="btn btn-primary btn-form" type="submit" disabled={!valid || pristine || submitting}>
-        Register
+        Регистрация
       </button>
       <BwmResError errors={errors} />
     </form>
@@ -47,19 +47,19 @@ const validate = values => {
   const errors = {};
 
   if (values.username && values.username.length < 4) {
-    errors.username = 'Username min length is 4 characters!';
+    errors.username = 'Имя пользователя минимальная длина 4 символа!';
   }
 
   if (!values.email) {
-    errors.email = 'Please enter email!';
+    errors.email = 'Введите email!';
   }
 
   if (!values.passwordConfirmation) {
-    errors.passwordConfirmation = 'Please enter password confirmation!';
+    errors.passwordConfirmation = 'Введите повторно пароль!';
   }
 
   if (values.password !== values.passwordConfirmation) {
-    errors.password = 'Passwords must be the same';
+    errors.password = 'пароль должен быть одинаковый';
   }
 
   return errors;

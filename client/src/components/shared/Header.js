@@ -17,13 +17,13 @@ class Header extends React.Component {
 
   renderAuthButtons(isAuth) {
     if (isAuth) {
-      return <a className="nav-item nav-link clickable" onClick={this.handleLogout}>Logout</a>;/* eslint-disable-line */
+      return <a className="nav-item nav-link clickable" onClick={this.handleLogout}>Выход</a>;/* eslint-disable-line */
     }
 
     return (
       <React.Fragment>
-        <Link className="nav-item nav-link" to="/login">Login <span className="sr-only">(current)</span></Link>
-        <Link className="nav-item nav-link" to="/register">Register</Link>
+        <Link className="nav-item nav-link" to="/login">Вход <span className="sr-only">(current)</span></Link>
+        <Link className="nav-item nav-link" to="/register">Регистрация</Link>
       </React.Fragment>
     );
   }
@@ -33,12 +33,12 @@ class Header extends React.Component {
       return (
         <div className="nav-item dropdown">
           <a className="nav-link nav-item dropdown-toggle clickable" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Owner Section
+            Для тебя
           </a>
           <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <Link className="dropdown-item" to="/rentals/new">Create Rental</Link>
-            <Link className="dropdown-item" to="/rentals/manage">Manage Rentals</Link>
-            <Link className="dropdown-item" to="/bookings/manage">Manage Bookings</Link>
+            <Link className="dropdown-item" to="/rentals/new"> Создать помещение</Link>
+            <Link className="dropdown-item" to="/rentals/manage">Управляй твоими помещениями</Link>
+            <Link className="dropdown-item" to="/bookings/manage">Управляй твоими арендами</Link>
           </div>
         </div>
       );

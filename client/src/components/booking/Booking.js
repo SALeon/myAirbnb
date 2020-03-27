@@ -82,7 +82,7 @@ class Booking extends React.Component {
     const startAt = picker.startDate.format('Y/MM/DD');
     const endAt = picker.endDate.format('Y/MM/DD');
 
-    this.dateRef.current.value = `${startAt} to ${endAt}`;
+    this.dateRef.current.value = `${startAt} до ${endAt}`;
 
     this.setState({
       proposedBooking: {
@@ -136,7 +136,7 @@ class Booking extends React.Component {
         this.addNewBookedOutDates(booking);
         this.cancelConfirmation();
         this.resetData();
-        toast.success('Booking has been succesfuly created! Enjoy.');
+        toast.success('Резерв жилья успешно прошел ! Наслаждайся.');
       },
       errors => {
         this.setState({
@@ -157,13 +157,13 @@ class Booking extends React.Component {
       <div className="booking">
         <h3 className="booking-price">
           ${rental.dailyRate}
-          <span className="booking-per-night">per night</span>
+          <span className="booking-per-night">за ночь</span>
         </h3>
         <hr />
         { !isAuth
           && (
           <Link className="btn btn-primary btn-confirm btn-block" to={{ pathname: '/login' }}>
-            Login to book place.
+            Войди в приложение
           </Link>
           )
         }
@@ -171,7 +171,7 @@ class Booking extends React.Component {
           && (
           <React.Fragment>
             <div className="form-group">
-              <label htmlFor="dates">Dates</label>
+              <label htmlFor="dates">Даты</label>
               <DateRangePicker
                 onApply={this.handleApply}
                 isInvalidDate={this.checkInvalidDates}
@@ -182,7 +182,7 @@ class Booking extends React.Component {
               </DateRangePicker>
             </div>
             <div className="form-group">
-              <label htmlFor="guests">Guests</label>
+              <label htmlFor="guests">Гости</label>
               <input
                 onChange={(event) => { this.selectGuests(event); }}
                 value={guests}
@@ -194,14 +194,14 @@ class Booking extends React.Component {
                 placeholder=""
               />
             </div>
-            <button disabled={!startAt || !endAt || !guests} onClick={() => this.confirmProposedData()} className="btn btn-primary btn-confirm btn-block">Reserve place now</button>
+            <button disabled={!startAt || !endAt || !guests} onClick={() => this.confirmProposedData()} className="btn btn-primary btn-confirm btn-block">Зарезервируй сейчас</button>
           </React.Fragment>
           )
         }
         <hr />
-        <p className="booking-note-title">People are interested into this house</p>
+        <p className="booking-note-title">Люди интересуются этим жильем</p>
         <p className="booking-note-text">
-          More than 500 people checked this rental in last month.
+          Более 500 человек смотрели это жилье за прошлый месяц.
         </p>
         <BookingModal
           open={this.state.modal.open}

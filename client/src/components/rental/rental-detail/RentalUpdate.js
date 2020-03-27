@@ -91,7 +91,7 @@ class RentalUpdate extends React.Component {
               <div className="row">
                 <div className="col-md-8">
                   <div className="rental">
-                    <label className={`rental-label rental-type ${rental.category}`}> Shared </label>
+                    <label className={`rental-label rental-type ${rental.category}`}> С подселением </label>
                     <EditableSelect
                       entity={rental}
                       entityField="shared"
@@ -108,7 +108,7 @@ class RentalUpdate extends React.Component {
                       entityField="category"
                       className={`rental-type ${rental.category}`}
                       updateEntity={this.updateRental}
-                      options={['apartment', 'house', 'condo']}
+                      options={['апартаменты', 'дом', 'квартира']}
                       errors={errors}
                       resetErrors={this.resetRentalErrors}
                     />
@@ -157,10 +157,10 @@ class RentalUpdate extends React.Component {
                           updateEntity={this.updateRental}
                           errors={errors}
                           resetErrors={this.resetRentalErrors}
-                        /> bedrooms
+                        /> спальные места
                       </span>
-                      <span><i className="fa fa-user" /> {rental.bedrooms + 4} guests</span>
-                      <span><i className="fa fa-bed" /> {rental.bedrooms + 2} beds</span>
+                      <span><i className="fa fa-user" /> {rental.bedrooms + 4} гостей</span>
+                      <span><i className="fa fa-bed" /> {rental.bedrooms + 2} кроватей</span>
                     </div>
                     <EditableText
                       entity={rental}

@@ -9,7 +9,7 @@ export function BookingCard(props) {
     <div className="col-md-4">
       <div className="card text-center">
         <div className="card-header">
-          {booking.rental ? booking.rental.category : 'Deleted Rental'}
+          {booking.rental ? booking.rental.category : 'Удаленные аренды'}
         </div>
         <div className="card-block">
           {booking.rental
@@ -23,11 +23,11 @@ export function BookingCard(props) {
           <p className="card-text booking-days">{pretifyDate(booking.startAt)} - {pretifyDate(booking.endAt)} | {booking.days} days</p>
           <p className="card-text booking-price"><span>Price: </span> <span className="booking-price-value">{booking.totalPrice} $</span></p>
           {booking.rental
-            && <Link className="btn btn-primary" to={`/rentals/${booking.rental._id}`}>Go to Rental</Link>
+            && <Link className="btn btn-primary" to={`/rentals/${booking.rental._id}`}>Перейти к аренде</Link>
           }
         </div>
         <div className="card-footer text-muted">
-          Created {pretifyDate(booking.createdAt)}
+          Создано {pretifyDate(booking.createdAt)}
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ export function PaymentCard(props) {
     <div className="col-md-4">
       <div className="card text-center">
         <div className="card-header">
-          Booking Made By {payment.fromUser.username}
+          Запрос от {payment.fromUser.username}
         </div>
         <div className="card-block">
           {booking.rental
@@ -61,11 +61,11 @@ export function PaymentCard(props) {
           <p className="card-text booking-price"><span>Price: </span> <span className="booking-price-value">{payment.amount / 100} $</span></p>
           <p className="card-text payment-status">Status: {payment.status}</p>
           {booking.rental
-            && <Link className="btn btn-primary" to={`/rentals/${booking.rental._id}`}>Go to Rental</Link>
+            && <Link className="btn btn-primary" to={`/rentals/${booking.rental._id}`}>Перейти</Link>
           }
         </div>
         <div className="card-footer text-muted">
-          Created {pretifyDate(booking.createdAt)}
+          Создано {pretifyDate(booking.createdAt)}
           {payment.status === 'pending' && paymentBtns && paymentBtns(payment)}
         </div>
       </div>

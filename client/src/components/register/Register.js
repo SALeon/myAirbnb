@@ -34,12 +34,12 @@ export class Register extends React.Component {
         <div className="bwm-form">
           <div className="row">
             <div className="col-md-5">
-              <h1>Register</h1>
+              <h1> Регистрация </h1>
               <RegisterForm submitCb={this.registerUser} errors={errors} />
             </div>
             <div className="col-md-6 ml-auto">
               <div className="image-container">
-                <h2 className="catchphrase">As our member you have access to most awesome places in the world.</h2>
+                <h2 className="catchphrase">Пользуйся доступным жильем</h2>
                 <img src=" https://images.unsplash.com/photo-1534838813692-d6d37d710f9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60 500w" alt="" />
               </div>
             </div>

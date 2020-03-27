@@ -65,8 +65,8 @@ class BookingManage extends React.Component {
 
   renderPaymentButtons = (payment) => (
     <div>
-      <button onClick={() => this.acceptPayment(payment)} className="btn btn-success">Accept</button>{' '}
-      <button onClick={() => this.declinePayment(payment)} className="btn btn-danger">Decline</button>
+      <button onClick={() => this.acceptPayment(payment)} className="btn btn-success">Принять</button>{' '}
+      <button onClick={() => this.declinePayment(payment)} className="btn btn-danger">Отклонить</button>
     </div>
   )
 
@@ -77,28 +77,28 @@ class BookingManage extends React.Component {
     return (
       <React.Fragment>
         <section id="userBookings">
-          <h1 className="page-title">My Bookings</h1>
+          <h1 className="page-title">Мои аренды</h1>
           <div className="row">
             { this.renderBookings(bookings) }
           </div>
           { !isFetching && bookings.length === 0
             && (
             <div className="alert alert-warning">
-              You have no bookings created go to rentals section and book your place today.
-              <Link style={{ marginLeft: '10px', }} className="btn btn-primary" to="/rentals">Available Rental</Link>
+              Ты еще не арендовал жилье? Сделай это сейчас.
+              <Link style={{ marginLeft: '10px', }} className="btn btn-primary" to="/rentals">Свободные аренды</Link>
             </div>
             )
           }
         </section>
         <section id="pendingBookings">
-          <h1 className="page-title">Pending Bookings</h1>
+          <h1 className="page-title">Ожидающие аренды</h1>
           <div className="row">
             { this.isHasPayments(pendingPayments) && this.renderPayments(pendingPayments) }
           </div>
           { !isFetching && pendingPayments.length === 0
             && (
             <div className="alert alert-warning">
-              You have no pending bookings currently...
+              У тебя нет запросов аренды...
             </div>
             )
           }

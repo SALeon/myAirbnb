@@ -14,7 +14,7 @@ export function RentalCard(props) {
           <div className="card-block">
             <h6 className={`card-subtitle ${rental.category}`}>{rentalType(rental.shared)} {rental.category} &#183; {rental.city}</h6>
             <h4 className="card-title">{rental.title}</h4>
-            <p className="card-text">${rental.dailyRate} per Night &#183; Free Cancelation</p>
+            <p className="card-text">${rental.dailyRate} за ночь &#183; Свободная отмена бронирования</p>
           </div>
         </div>
       </Link>

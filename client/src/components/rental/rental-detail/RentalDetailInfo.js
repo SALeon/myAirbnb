@@ -15,9 +15,9 @@ export function RentalDetailInfo(props) {
       <h1 className="rental-title">{rental.title}</h1>
       <h2 className="rental-city">{toUpperCase(rental.city)}</h2>
       <div className="rental-room-info">
-        <span><i className="fa fa-building" />{rental.bedrooms} bedrooms</span>
-        <span><i className="fa fa-user" /> {rental.bedrooms + 4} guests</span>
-        <span><i className="fa fa-bed" /> {rental.bedrooms + 2} beds</span>
+        <span><i className="fa fa-building" />{rental.bedrooms} ванны </span>
+        <span><i className="fa fa-user" /> {rental.bedrooms + 4} гостей</span>
+        <span><i className="fa fa-bed" /> {rental.bedrooms + 2} спальных места</span>
       </div>
       <p className="rental-description">
         {rental.description}

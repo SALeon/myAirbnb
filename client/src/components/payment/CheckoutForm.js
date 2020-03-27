@@ -34,11 +34,11 @@ class CheckoutForm extends React.Component {
     return (
       <form {...formStyles()} onSubmit={this.handleSubmit}>
         <CardElement {...createOptions()} />
-        <p {...paragraphStyle()}>*You will be not charger yet.</p>
+        <p {...paragraphStyle()}>*Ты не оплатил еще.</p>
 
         {error && <div className="alert alert-danger alert-payment">{error}</div>}
 
-        <button {...buttonStyles()} className="btn btn-success">Confirm Payment</button>
+        <button {...buttonStyles()} className="btn btn-success">Проверить карту</button>
       </form>
     );
   }

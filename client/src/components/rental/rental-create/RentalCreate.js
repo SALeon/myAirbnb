@@ -12,7 +12,7 @@ export class RentalCreate extends React.Component {
       redirect: false
     };
 
-    this.rentalCateogies = ['apartment', 'house', 'condo'];
+    this.rentalCateogies = ['апартаменты', 'дом', 'квартира'];
 
     this.createRental = this.createRental.bind(this);
   }
@@ -34,7 +34,7 @@ export class RentalCreate extends React.Component {
         <div className="bwm-form">
           <div className="row">
             <div className="col-md-5">
-              <h1 className="page-title">Create Rental</h1>
+              <h1 className="page-title">Создать арендное помещение</h1>
               <RentalCreateForm
                 submitCb={this.createRental}
                 options={this.rentalCateogies}
@@ -43,7 +43,7 @@ export class RentalCreate extends React.Component {
             </div>
             <div className="col-md-6 ml-auto">
               <div className="image-container">
-                <h2 className="catchphrase">Hundreds of awesome places in reach of few clicks.</h2>
+                <h2 className="catchphrase">Тысячи мест ждут тебя.</h2>
                 <img src="https://storage.cloud.google.com/room-book-bukcet/ralph-kayden-2d4lAQAlbDA-unsplash.jpg" alt="" />
               </div>
             </div>

@@ -25,9 +25,9 @@ export class RentalManageModal extends React.Component {
   renderBookings(bookings) {
     return bookings.map((booking, index) => (
       <React.Fragment key={index}>
-        <p><span>Date:</span> {pretifyDate(booking.startAt)} - {pretifyDate(booking.endAt)}</p>
-        <p><span>Guests:</span> {booking.guests}</p>
-        <p><span>Total Price:</span> {booking.totalPrice} $</p>
+        <p><span>Даты:</span> {pretifyDate(booking.startAt)} - {pretifyDate(booking.endAt)}</p>
+        <p><span>Гостей:</span> {booking.guests}</p>
+        <p><span>Итого:</span> {booking.totalPrice} $</p>
         { index + 1 !== bookings.length
           && <hr />
         }
